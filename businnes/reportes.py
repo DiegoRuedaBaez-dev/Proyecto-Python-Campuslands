@@ -1,6 +1,6 @@
 import json
 import os
-from commons.menus import *
+from commons.menus import menu_rutas
 from commons.utils import limpiar_pantalla
 
 def inscritos():
@@ -190,7 +190,6 @@ def camp_ent_ruta3():
 
     json_path = os.path.join("proyecto-python", "data", "CampersData.json")
     mostrar_campers_con_ruta(json_path)
-    
 def camp_trainer():
     limpiar_pantalla() 
     op=menu_rutas()
@@ -273,7 +272,6 @@ def camp_ruta3():
                 if all(entry.get('Nombre') is not None and entry.get('Apellido') is not None and
                     entry.get('Profesor') is not None and entry.get('Ruta') is not None and
                     entry.get('NotaT') is not None and entry.get('NotaP') is not None for entry in data):
-
                     campers_nodejs = [(entry['Nombre'], entry['Apellido'], entry['NotaT'], entry['NotaP']) for entry in data if entry['Ruta'] == 'NetCore']
 
                     for Nombre, Apellido, NotaT, NotaP in campers_nodejs:
@@ -283,7 +281,6 @@ def camp_ruta3():
                         estado = "Aprobado" if nota_final > 60 else "En Riesgo"
 
                         print(f"Nombre: {Nombre}, Apellido: {Apellido}, Nota Final: {nota_final:.2f}, Estado: {estado}")
-
                 else:
                     print("El archivo JSON no tiene la estructura esperada (Nombre, Apellido, Profesor, Ruta, NotaT, NotaP).")
         except FileNotFoundError:
@@ -303,3 +300,4 @@ def camp_ap_rep_ruta():
         camp_ruta2()
     elif op==3:
         camp_ruta3()
+

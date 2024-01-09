@@ -13,7 +13,6 @@ def guardarAulas_json():
         print("Error al decodificar el archivo JSON . El formato podría ser incorrecto.")
     except Exception as e:
         print("Error desconocido:")
-
 def cargarAulas_json():
     try:
         with open(os.path.join("data","Aulas.json"), 'r') as archivo_json:        
@@ -27,8 +26,6 @@ def cargarAulas_json():
      print(f"Error al cargar el archivo: {e}")
     return []
 lista_aulas = cargarAulas_json()
-    
-
 def crearAulas():
     print("Seleccione el aula que desea revisar.")
     AulaNombre = input("Ingrese el nombre del Aula (Grupo): ")
@@ -53,7 +50,7 @@ def modificarAulas():
     
 
 def buscarAulas():
-    def buscarporaula(json_path, palabra_ingresada):
+    def buscar_por_aula(json_path, palabra_ingresada):
         try:
             with open(json_path, 'r') as archivo_json:
                 data = json.load(archivo_json)
@@ -69,9 +66,13 @@ def buscarAulas():
         except FileNotFoundError:
             print(f"El archivo '{json_path}' no fue encontrado.")
         except Exception as e:
-            print(f"Error al cargar el archivo JSON: {type(e).__name}: {e}")
+            print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
 
     json_path = os.path.join("proyecto-python","data","Aulas.json")
+ 
+
     palabra_ingresada = input("Ingrese una palabra para buscar por Aula: ")
-    buscarporaula(json_path, palabra_ingresada)
+
+
+    buscar_por_aula(json_path, palabra_ingresada)

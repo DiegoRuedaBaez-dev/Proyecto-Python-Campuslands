@@ -3,7 +3,7 @@ import os
 
 def guardar_json():
     try:
-      with open(os.path.join("data","Ingresos.json"), 'w') as archivo_json:
+      with open(os.path.join("proyecto-python","data","Ingresos.json"), 'w') as archivo_json:
         json.dump(lista_campers, archivo_json, indent=2)
         print("La lista de campers ha sido guardada")
     except FileNotFoundError:
@@ -12,7 +12,6 @@ def guardar_json():
         print("Error al decodificar el archivo JSON . El formato podría ser incorrecto.")
     except Exception as e:
         print("Error desconocido:")
-        
 def listar_campers():
     print("Listado de campers: ")
     for camper in lista_campers:
@@ -20,7 +19,7 @@ def listar_campers():
 
 def load_campers_json():
     try:
-        with open(os.path.join("data","Ingresos.json"), 'r') as archivo_json:        
+        with open(os.path.join("proyecto-python","data","Ingresos.json"), 'r') as archivo_json:        
             lista_campers = json.load(archivo_json)
             print("La lista de campers ha sido cargada")
             return lista_campers
