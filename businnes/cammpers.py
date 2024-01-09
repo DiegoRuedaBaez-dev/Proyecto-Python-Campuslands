@@ -12,6 +12,7 @@ def guardar_json():
         print("Error al decodificar el archivo JSON . El formato podría ser incorrecto.")
     except Exception as e:
         print("Error desconocido:")
+        
 def listar_campers():
     print("Listado de campers: ")
     for camper in lista_campers:

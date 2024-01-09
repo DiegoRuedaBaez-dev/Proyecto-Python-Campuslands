@@ -14,9 +14,11 @@ def campers():
     if op==2:
        listar_campers()
        input("Clic cualquier teclas [continuar]: ")
+
 def trainers():
     limpiar_pantalla()    
     op=menu_trainers()
+
 def matriculas():
     limpiar_pantalla()    
     op=menu_matriculas()
@@ -28,6 +30,7 @@ def matriculas():
         input("Clic cualquier teclas [continuar]: ")
     if op == 3:
         modificarMatricula()
+
 def aulas():
     limpiar_pantalla()    
     op=menu_aulas()
@@ -39,6 +42,7 @@ def aulas():
         input("Clic cualquier teclas [continuar]: ")
     if op == 3:
         modificarAulas()
+
 def reportes():
     limpiar_pantalla()    
     op=menu_reportes()
@@ -61,8 +65,6 @@ def reportes():
         camp_ap_rep_ruta()
         input("Clic cualquier teclas [continuar]: ")
 
-    
-
 #start
 while True: 
    limpiar_pantalla()
@@ -80,4 +82,3 @@ while True:
    elif op==6:
        print("Saliendo")
        break
-       
