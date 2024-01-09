@@ -1,6 +1,6 @@
 import json
 import os
-from commons.utils import *
+
 
 def guardarAulas_json():
     try:
