@@ -1,6 +1,7 @@
 import json
 import os
 from commons.utils import *
+
 def guardarAulas_json():
     try:
       with open(os.path.join("data","Aulas.json"), 'w') as archivo_json:
@@ -48,10 +49,32 @@ def crearAulas():
     guardarAulas_json()
 
 def modificarAulas():
-    print("Seleccione el aula que desea revisar.")
+    pass
     
 
 def buscarAulas():
-    print("Listado de campers: ")
-    for camper in lista_aulas:
-        print(camper)
+    def Comparasion(file_path):
+        try:
+            with open(file_path, 'r') as archivo_json:
+                data = json.load(archivo_json)
+
+                if select in lista_aulas:
+                    temp = lista_aulas[select]
+                    inName = input("Ingrese el nombre que desea buscar:")
+                    inName.lower
+                    if temp == inName:
+                        for i in len(lista_aulas):
+                            print
+                    else:
+                        print(f"El valor'{temp}'no existe en Aulas")
+                else:
+                    print(f"Su seleccion'{select}' no es una seleccion valida")            
+        except FileNotFoundError:
+            print("El archivo no fue encontrado.")
+            return []
+        except Exception as e:
+            print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
+            return []
+    json_path = os.path.join("proyecto-python", "data", "Aulas.json")
+    select = input("Ingrese que desea buscar:")
+    Comparasion(json_path, select)

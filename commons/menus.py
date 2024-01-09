@@ -48,6 +48,17 @@ def menu_aulas():
     op=validar_opcion("Opcion: ",1,4)
     return op
 
+def menu_buscar_aulas():
+    print("----------- Menú Buscar Aulas-----------")
+    print("1. Buscar por Nombre")
+    print("2. Buscar por Ruta")
+    print("3. Buscar por Modulo")
+    print("4. Buscar por Zona de Entrenamiento")
+    print("5. Buscar por Trainer")
+    print("6. Salir")
+    op=validar_opcion("Opcion: ",1,6)
+    return op
+
 def menu_reportes():
     print("----------- Menú Reportes-----------")
     print("1. Listar campers estado inscrito")
@@ -58,4 +69,13 @@ def menu_reportes():
     print("6. Listar campers aprobados y reprobados por ruta")
     print("7. Salir")
     op=validar_opcion("Opcion: ",1,7)
+    return op
+
+def menu_rutas():
+    print("----------- Menú Rutas-----------")
+    print("1. Ruta NodeJS")
+    print("2. Ruta Java")
+    print("3. Ruta NetCore")
+    print("4. Salir")
+    op=validar_opcion("Opcion: ",1,4)
     return op
