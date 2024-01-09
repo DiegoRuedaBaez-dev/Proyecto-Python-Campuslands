@@ -4,7 +4,7 @@ from commons.utils import *
 
 def guardarMatricula_json():
     try:
-      with open(os.path.join("proyecto-python", "data", "CampersData.json"), 'w') as archivo_json:
+      with open(os.path.join("Proyecto-Python-Campuslands-main","data", "CampersData.json"), 'w') as archivo_json:
         json.dump(lista_matriculas, archivo_json, indent=2)
         print("La lista de matriculas ha sido guardada")
     except FileNotFoundError:
@@ -15,7 +15,7 @@ def guardarMatricula_json():
         print("Error desconocido:")
 def cargarmatriculas_json():
     try:
-        with open(os.path.join("proyecto-python", "data", "CampersData.json"), 'r') as archivo_json:        
+        with open(os.path.join("Proyecto-Python-Campuslands-main","data", "CampersData.json"), 'r') as archivo_json:        
             lista_matriculas = json.load(archivo_json)
             print("La lista de matriculas ha sido cargada")
             return lista_matriculas

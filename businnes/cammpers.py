@@ -3,7 +3,7 @@ import os
 
 def guardar_json():
     try:
-      with open(os.path.join("proyecto-python","data","Ingresos.json"), 'w') as archivo_json:
+      with open(os.path.join("Proyecto-Python-Campuslands-main","data","Ingresos.json"), 'w') as archivo_json:
         json.dump(lista_campers, archivo_json, indent=2)
         print("La lista de campers ha sido guardada")
     except FileNotFoundError:
@@ -20,7 +20,7 @@ def listar_campers():
 
 def load_campers_json():
     try:
-        with open(os.path.join("proyecto-python","data","Ingresos.json"), 'r') as archivo_json:        
+        with open(os.path.join("Proyecto-Python-Campuslands-main","data","Ingresos.json"), 'r') as archivo_json:        
             lista_campers = json.load(archivo_json)
             print("La lista de campers ha sido cargada")
             return lista_campers
@@ -55,7 +55,3 @@ def crear_camper():
     lista_campers.append(camper)
     print("Se creó el camper con éxito")
     guardar_json()
-
-
-
-

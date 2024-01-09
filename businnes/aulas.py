@@ -4,7 +4,7 @@ import os
 
 def guardarAulas_json():
     try:
-      with open(os.path.join("data","Aulas.json"), 'w') as archivo_json:
+      with open(os.path.join("Proyecto-Python-Campuslands-main","data","Aulas.json"), 'w') as archivo_json:
         json.dump(lista_aulas, archivo_json, indent=2)
         print("La lista de Aulas ha sido guardada")
     except FileNotFoundError:
@@ -15,7 +15,7 @@ def guardarAulas_json():
         print("Error desconocido:")
 def cargarAulas_json():
     try:
-        with open(os.path.join("data","Aulas.json"), 'r') as archivo_json:        
+        with open(os.path.join("Proyecto-Python-Campuslands-main","data","Aulas.json"), 'r') as archivo_json:        
             lista_aulas = json.load(archivo_json)
             print("La lista de Aulas ha sido cargada")
             return lista_aulas
