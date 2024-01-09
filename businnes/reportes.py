@@ -24,7 +24,7 @@ def inscritos():
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
             return []
     
-    json_path = os.path.join("proyecto-python","data","Ingresos.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main","data","Ingresos.json")
 
     nombres_apellidos = nom_ap(json_path)
 
@@ -54,7 +54,7 @@ def aprobados():
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
             return []
 
-    json_path = os.path.join("proyecto-python", "data", "Ingresos.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "Ingresos.json")
 
     info_campers = ap(json_path)
 
@@ -84,7 +84,7 @@ def lista_trainers():
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
             return []
     
-    json_path = os.path.join("proyecto-python","data","trainers.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main","data","trainers.json")
 
     nombres_apellidos = nom_ap_p(json_path)
 
@@ -112,7 +112,7 @@ def camp_bajo_rendimiento():
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
             return []
 
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
 
     info_campers = bajo_ren(json_path)
 
@@ -142,7 +142,7 @@ def camp_ent_ruta1():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
     mostrar_campers_con_ruta(json_path)
 def camp_ent_ruta2():
     def mostrar_campers_con_ruta(json_path):
@@ -165,7 +165,7 @@ def camp_ent_ruta2():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
     mostrar_campers_con_ruta(json_path)
 def camp_ent_ruta3():
     def mostrar_campers_con_ruta(json_path):
@@ -188,7 +188,7 @@ def camp_ent_ruta3():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main" "data", "CampersData.json")
     mostrar_campers_con_ruta(json_path)
 def camp_trainer():
     limpiar_pantalla() 
@@ -228,7 +228,7 @@ def camp_ruta1():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
          
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
 
     mostrar_campers_con_ruta(json_path)
 def camp_ruta2():
@@ -259,7 +259,7 @@ def camp_ruta2():
             except Exception as e:
                 print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
             
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
 
     mostrar_campers_con_ruta(json_path)
 def camp_ruta3():
@@ -288,7 +288,7 @@ def camp_ruta3():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
          
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
 
     mostrar_campers_con_ruta(json_path)
 def camp_ap_rep_ruta():
@@ -300,3 +300,4 @@ def camp_ap_rep_ruta():
         camp_ruta2()
     elif op==3:
         camp_ruta3()
+

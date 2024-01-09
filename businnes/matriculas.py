@@ -93,11 +93,6 @@ def buscarMatricula():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
-
-    json_path = os.path.join("proyecto-python", "data", "CampersData.json")
- 
-
+    json_path = os.path.join("Proyecto-Python-Campuslands-main", "data", "CampersData.json")
     palabra_ingresada = input("Ingrese el numero de identificacion del camper: ")
-
-
     buscar_por_id(json_path, palabra_ingresada)

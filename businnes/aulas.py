@@ -68,6 +68,6 @@ def buscarAulas():
         except Exception as e:
             print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
 
-    json_path = os.path.join("proyecto-python","data","Aulas.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main","data","Aulas.json")
     palabra_ingresada = input("Ingrese una palabra para buscar por Aula: ")
     buscar_por_aula(json_path, palabra_ingresada)

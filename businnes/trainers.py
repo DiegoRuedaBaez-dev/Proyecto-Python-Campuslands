@@ -4,7 +4,7 @@ import os
 #importar y guardar lista json trainers
 def load_trainers_json():
     try:
-      with open(os.path.join("python-2","x_Taller","Data","Trainers.json"), 'r') as archivo_json:        
+      with open(os.path.join("Proyecto-Python-Campuslands-main","data","trainers.json"), 'r') as archivo_json:        
         lista_trainers= json.load(archivo_json)
         print("La lista de Trainers ha sido guardada")
         return lista_trainers
@@ -35,7 +35,7 @@ def crear_trainer():
 #Guardar archivo json de trainers
 def guardar_json():
     try:
-      with open(os.path.join("python-2","x_Taller","Data","Trainers.json"), 'w') as archivo_json:
+      with open(os.path.join("Proyecto-Python-Campuslands-main","data","trainers.json"), 'w') as archivo_json:
         json.dump(lista_trainers, archivo_json, indent=2)
         print("La lista de trainers ha sido guardada")
     except FileNotFoundError:
@@ -69,7 +69,7 @@ def buscar_trainer():
             print(f"Error al cargar el archivo JSON: {type(e).name}: {e}")
             return []
 
-    json_path = os.path.join("python-2","x_Taller","Data","Trainers.json")
+    json_path = os.path.join("Proyecto-Python-Campuslands-main","data","trainers.json")
 
     nombres_apellidos = nom_ap_p(json_path)
 
