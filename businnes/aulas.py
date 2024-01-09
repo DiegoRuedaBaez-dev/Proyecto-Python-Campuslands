@@ -53,28 +53,25 @@ def modificarAulas():
     
 
 def buscarAulas():
-    def Comparasion(file_path):
+    def buscarporaula(json_path, palabra_ingresada):
         try:
-            with open(file_path, 'r') as archivo_json:
+            with open(json_path, 'r') as archivo_json:
                 data = json.load(archivo_json)
+                aulas_coincidentes = [entry for entry in data if entry.get('Aula') == palabra_ingresada]
 
-                if select in lista_aulas:
-                    temp = lista_aulas[select]
-                    inName = input("Ingrese el nombre que desea buscar:")
-                    inName.lower
-                    if temp == inName:
-                        for i in len(lista_aulas):
-                            print
-                    else:
-                        print(f"El valor'{temp}'no existe en Aulas")
+                if aulas_coincidentes:
+                    print(f"El aula '{palabra_ingresada}' existe. Datos de los estudiantes:")
+                    for entry in aulas_coincidentes:
+                        print(f"Nombre: {entry['Nombre']}, Ruta: {entry['Ruta']}, Modulo: {entry['Modulo']}")
                 else:
-                    print(f"Su seleccion'{select}' no es una seleccion valida")            
+                    print(f"No hay coincidencias para el aula '{palabra_ingresada}'.")
+
         except FileNotFoundError:
-            print("El archivo no fue encontrado.")
-            return []
+            print(f"El archivo '{json_path}' no fue encontrado.")
         except Exception as e:
-            print(f"Error al cargar el archivo JSON: {type(e).__name__}: {e}")
-            return []
-    json_path = os.path.join("proyecto-python", "data", "Aulas.json")
-    select = input("Ingrese que desea buscar:")
-    Comparasion(json_path, select)
+            print(f"Error al cargar el archivo JSON: {type(e).__name}: {e}")
+
+
+    json_path = os.path.join("proyecto-python","data","Aulas.json")
+    palabra_ingresada = input("Ingrese una palabra para buscar por Aula: ")
+    buscarporaula(json_path, palabra_ingresada)
